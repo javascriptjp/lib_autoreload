@@ -5,7 +5,7 @@ const {Worker} = require('worker_threads');
             const $$_ = new Worker($$);
             $$_.on('exit',r);
             $$_.on("error",_$=>{
-                console.log(`${"=".repeat((process.stdout.columns))}\n${_$}\n${"=".repeat(process.stdout.columns)}`)
+                process.stdout.write(`${"=".repeat((process.stdout.columns))}\n${_$}\n${"=".repeat(process.stdout.columns)}\n`)
             });
         }).then(()=>$_($$))
     }
